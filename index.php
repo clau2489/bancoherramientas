@@ -6,19 +6,14 @@
 
 <body id="page-top">
 
-  <!-- Navigation 
-  <a class="menu-toggle rounded" href="#">
-    <i class="fas fa-bars"></i>
-  </a> -->
-
 
   <!-- Header -->
   <header class="masthead d-flex">
     <div class="container text-center my-auto">
-      <img src="assets/img/comproenmipueblo-logo.png" width="300px;">
-      <!--<h1 class="mb-1">Compro en mi Pueblo</h1> -->
+      <img src="assets/img/mmpblanco.png" width="300px;">
+      <br><br>
       <h3 class="mb-5">
-        <em style="color: white;">Una forma diferente de comprar</em>
+        <em style="color: white;">Banco de Maquinarias, Herramientas y Materiales para la Emergencia Social</em>
       </h3>
       <a class="btn btn-success btn-sm js-scroll-trigger" href="#about">Accedé al programa</a>
     </div>
@@ -55,11 +50,12 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <li>Ser mayor de 18 (dieciocho) años de edad; argentino nativo, naturalizado o por opción, o extranjero con residencia permanente en en el país;</li>
-          <li>No tener una relación de dependencia (empleo formal registrado);</li>
-          <li>Tres años de residencia en el Distrito de Marcos Paz;</li>
-          <li>Contar con una sola vivienda familiar (propia, alquilada, compartida);</li>
-          <li>Se debe encontrar en situación de alta vulnerabilidad social y económica. </li>
+          <li>Ser mayor de 18 (dieciocho) años de edad; argentino nativo, naturalizado o por opción, o extranjero con residencia permanente en el país</li>
+          <li>No tener una relación de dependencia (empleo formal registrado)</li>
+          <li>No ser jubilado/a, ni pensionado/a (salvo pensión no contributiva)</li>
+          <li>Tener tres (3) años mínimos continuos de residencia en el Distrito de Marcos Paz acreditables previos a la presentación.</li>
+          <li>Contar con única vivienda familiar de ocupación permanente (propia, alquilada, compartida);</li>
+          <li>Se debe revestir en situación de alta vulnerabilidad social y económica. </li>
         </div>                               
       </div>
       <br><br>
@@ -81,80 +77,59 @@
     </div>
   </section>
 
+  <hr>
+
   <!-- Services -->
-  <section class="content-section text-white text-center" id="services">
+  <section class="content-section" id="services">
     <div class="container">
-      <div class="content-section-heading">
-        <h2 class="mb-5 text-darkgreen">¿Qué estas buscando?</h2>
+      <div class="content-section-heading text-center">
+        <h2 class="mb-5 text-darkgreen">Formulario de Solicitud</h2>
       </div>
-
-
       <div class="row">
-
-        <?php
-        include("config/db.php");
-        include("config/conexion.php");        
-        $consulta=mysqli_query($con,"select * from categorias order by tipo");
-        while($campo=mysqli_fetch_array($consulta)){
-        ?>
-
-
-        <div class="col-lg-3 col-md-6 p2">
-          <a href="categories.php?id=<?php echo $campo['id_categoria'] ?>"><img src="assets/img/categorias/<?php echo $campo['imagen'] ?>" class="rounded-circle" /></a>
-          <h4 class="text-mmp">
-            <strong><?php echo $campo['tipo'] ?></strong>
-          </h4>
+        <div class="offset-md-3 col-md-6">
+          <form action="ejes.php" method="post">
+            <div class="form-group">
+              <label>Apellido/s: </label>
+              <input type="text" class="form-control" id="apellido" name="apellido" required style="text-transform:uppercase;" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();">
+            </div>
+            <div class="form-group">
+              <label>Nombres: </label>
+              <input type="text" class="form-control" id="nombre" name="nombre" required style="text-transform:uppercase;" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();">
+            </div>
+            <div class="form-group">
+              <label>Número de Documento: </label>
+              <input type="number" class="form-control" id="documento" name="documento" required minlength="7" maxlength="8">
+            </div>
+            <div class="form-group">
+              <label>Número de CUIL: </label>
+              <input type="number" class="form-control" id="cuil" name="cuil" required minlength="10" maxlength="11">
+            </div>
+            <div class="form-group">
+              <label>Numero de Celular: (sin 0 y 15)</label>
+              <input type="text" class="form-control" id="telefono" name="telefono" required>
+            </div>            
+            <div class="form-group">
+              <label>Dirección y Altura: </label>
+              <input type="text" class="form-control" id="direccion" name="direccion" required style="text-transform:uppercase;" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();">
+            </div>
+            <div class="form-group">
+              <label>Barrio: </label>
+              <input type="text" class="form-control" id="barrio" name="barrio" required style="text-transform:uppercase;" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();">
+            </div>
+            <div class="form-group">
+              <label>Localidad: </label>
+              <input type="text" class="form-control" id="localidad" name="localidad" required style="text-transform:uppercase;" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();">
+            </div>
+            <br>
+            <input type="submit" class="btn btn-primary btn-block" value="Continuar">
+          </form>          
         </div>
-
-
-        <?php
-          }
-        ?>        
+      </div>
+       
 
     </div>
   </section>
 
-
-  <!-- Call to Action -->
-  <section class="content-section text-white" id="faq">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-md-6 p1">
-          <a href="index.php" class="btn btn-compro btn-block"><img src="assets/img/comproenmipueblo-logo.png" width="262px">
-          </a>
-        </div>
-        <div class="col-md-6 p1">
-          <a href="https://www.facebook.com/FeriasOnlinemmp" class="btn btn-feria btn-block"><img src="assets/img/feriavirtual.png" width="150px" class="p1"></a>        
-          <!--
-          <br><br>          
-          <h2 class="text-dark">Respuestas para la comunidad</h2>
-        </div>
-        <div class="col-md-6 p2">
-          <a href="#" class="btn btn-success btn-block p2">
-            <h2>Soy vecino de Marcos Paz</h2>
-            <br>            
-            <h4>
-              <strong>¿Que beneficios obtengo?</strong>
-            </h4>            
-          </a>        
-        </div>
-        <div class="col-md-6 p2">
-          <a href="#" class="btn btn-primary btn-block p2">
-            <h2>Soy Comerciante</h2>
-            <br>            
-            <h4>
-              <strong>¿Como puedo adherirme al programa?</strong>
-            </h4>            
-          </a>        
-        </div> -->        
-      </div>      
-    </div>
-  </section>
-
-  <!-- Map -->
-  <section id="contact">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26214.297270198735!2d-58.85284599653067!3d-34.78613311589264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcec18593da79b%3A0xea7c5321cc18b346!2sMarcos%20Paz%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1590896867331!5m2!1ses-419!2sar" width="100%" height="600px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>        
-  </section>
 
 
   <?php include("layout/footer.php");?>
