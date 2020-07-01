@@ -75,33 +75,14 @@
             </div>
             <hr>
             <div class="form-group">
-              <label>Enumere hasta 5 elementos necesarios para desarrollar el emprendimiento pizzero</label>
-              <span style="font-size: 12px">Ejemplo: <br>
-              Actividad: Pizzeria, Materiales: 1 Horno Pizzero, 6 Moldes para pizza, 2 Cucharones, 1 Cortador de pizza, 1 Gancho</span>
-              <textarea class="form-control" rows="5" name="elementos" id="elementos" style="text-transform:uppercase;" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();">
+              <label>Por favor comente una breve reseña de su experiencia y si cuenta con alguna maquinaria o herramienta para la actividad elegida para realizar el Proyecto a presentar:</label>
+              <textarea class="form-control" rows="5" name="experiencia" id="experiencia" style="text-transform:uppercase;" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();">
               </textarea>
             </div>
             <hr>
             <div class="form-group">
-              <label>Enumere los materiales y/o insumos necesarios para llevar a cabo su proyecto: </label>
-              <span style="font-size: 12px">Ejemplo: <br>
-              Actividad: Pizzeria, Materiales: 1 Bolsa de harina, 1 lata de tomate, 1 bolsa de orégano, 1 botella de aceite, 2 hormas de queso</span>
-              <textarea class="form-control" rows="5" name="materiales" id="materiales" style="text-transform:uppercase;" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();">
-              </textarea>
-            </div>
-            <div class="form-group">
-              <label>Usted esta realizando la preinscripcion online, con sus datos personales contemplando las maquinarias, herramientas y materiales o insumos a necesitar para la actividad enumerándolas en forma de prioridad de menor a mayor; manifestando asimismo su experiencia que cuenta en el mismo como así también si cuenta con alguna maquinaria previa.</label>
-              <label>Esta solicitud tendrá un numero de seguimiento que será brindado por el sistema informático; posteriormente pasará a una junta evaluadora integrada por distintas áreas de competencia municipal a fin de analizar la viabilidad del proyecto en la cual se tendrá en cuenta los requisitos y consideraciones establecidas precedentemente.</label> 
-              <label>La Junta Evaluadora esta conformada por las siguientes áreas: (a consideración)
-                <li>- Área de Gestión Pública.</li>
-                <li>- Área de Gobierno.</li>
-                <li>- Área de Participación.</li>
-                <li>- Área de Economía.</li>
-                <li>- Área de Desarrollo Productivo.</li>
-                <li>- Área de Desarrollo Social.</li>
-                <li>- Área de Comercio.</li>
-                <li>- Área de Contrataciones.</li>
-                <li>- Área de Unidad Intendente.</li>
+              <label>
+                Tenga en cuenta que este formulario será analizado y evaluado por autoridad competente. Asimismo, Ud. podrá ser contactado o visitado a fin de verificar los datos manifestados en el formulario.
               </label>
             </div>
             <div class="form-group">

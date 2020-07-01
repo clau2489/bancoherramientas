@@ -9,8 +9,34 @@ $barrio = $_POST['barrio'];
 $localidad = $_POST['localidad'];
 $actividad = $_POST['actividad'];
 $colaborador = $_POST['colaborador'];
-$elementos = $_POST['elementos'];
-$materiales = $_POST['materiales'];
+$experiencia = $_POST['experiencia'];
+
+
+$d=mt_rand(1,10000);
+
+
+$to = "reactivar@gmail.com";
+$subject = "PROGRAMA: REACTIVAR";
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+ 
+$message = "
+<html>
+<head>
+<title> Solicitud N° ". $apellido. "</title>
+</head>
+<body>
+<h1>". $apellido ."</h1>
+<h1>". $nombre ."</h1>
+<h1>". $documento ."</h1>
+<h1>". $cuil ."</h1>
+<h1>". $telefono ."</h1>
+
+</body>
+</html>";
+ 
+mail($to, $subject, $message, $headers);
+
 
 ?>
 <!DOCTYPE html>
@@ -33,14 +59,14 @@ $materiales = $_POST['materiales'];
 			  <h4 class="alert-heading">Felicitaciones</h4>
 			  <p>Su preinscripcion al Programa de “Banco de Maquinarias, Herramientas y Materiales para la Emergencia Social” ha sido satisfactoria</p>
 			  <br>
+        <p>Su numero de solicitud es el: </p>
+        <h4>#<?php echo  $d ?></h4>
 			  <p class="mb-0">Nuestros representantes del area se estaran comunicando con usted brevemente.</p>
 			  <hr>
 			  <a class="btn btn-primary btn-block" href="index.php">Volver a la página principal</a>
 			</div>         
         </div>
       </div>
-       
-
     </div>
   </section>
 
